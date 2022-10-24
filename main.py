@@ -9,24 +9,23 @@ player_two = 'Marco van Basten'
 goal_0 = 32
 goal_1 = 54
 
-scorers = f'{player_one} {str(goal_0)}, {player_two} {str(goal_1)}'
+scorers = f'{player_one} {goal_0}, {player_two} {goal_1}'
 print(scorers)
 
 report = f'{player_one} scored in the {goal_0}nd minute\n{player_two} scored in the {goal_1}th minute'
 print(report)
 
-player = player_one
-x = player.find("Ruud")
-first_name = player[:4]
+player = player_two
+find_space = player.find(" ")
+first_name = player[:find_space]
 print(first_name)
 first_name_len = len(first_name)
 
-y = player.find("Gullit")
-last_name = player[5:len(player)]
-last_name_len = len(last_name)
+last_name = player[find_space:]
+last_name_len = len(last_name)-1
 print(last_name_len)
 
-initial = player[0] + '. '
+initial = player[0] + '.'
 name_short = initial + last_name
 print(name_short)
 
